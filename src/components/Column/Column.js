@@ -13,6 +13,8 @@ class Column extends React.Component {
   
   static propTypes = {
     title: PropTypes.string.isRequired,
+    cards: PropTypes.array.isRequired,
+    icon: PropTypes.string.isRequired,
   }
   
   addCard(title) {
@@ -23,8 +25,8 @@ class Column extends React.Component {
           {
             key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
             title,
-          }
-        ]
+          },
+        ],
       }
     ));
   }

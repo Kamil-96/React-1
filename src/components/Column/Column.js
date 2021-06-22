@@ -3,7 +3,7 @@ import styles from './Column.scss';
 import PropTypes from 'prop-types';
 import Card from '../Card/Card';
 //import Creator from '../Creator/Creator';
-//import {settings} from '../../data/dataStore';
+import {settings} from '../../data/dataStore';
 import Icon from '../Icon/Icon';
 
 class Column extends React.Component {
@@ -11,6 +11,10 @@ class Column extends React.Component {
     title: PropTypes.string.isRequired,
     cards: PropTypes.array.isRequired,
     icon: PropTypes.string.isRequired,
+  }
+
+  static defaultProps = {
+    icon: settings.defaultColumnIcon,
   }
   
   render() {
